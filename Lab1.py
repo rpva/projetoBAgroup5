@@ -1,15 +1,10 @@
 from functions import *
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
-data = pd.read_csv('covtype.csv')
-
-print(data.shape)
-
-
-data = pd.read_csv('covtype.csv', index_col='Cover_Type(Class)', sep=';')
-print(data.head())
+data = pd.read_csv('covtype.csv', sep=';')  # import the dataset into the dataframe, using pandas
+print(data.head()) # outputs table contents into console
 
 print(data.shape)
 
