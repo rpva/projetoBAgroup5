@@ -1,12 +1,14 @@
 from functions import *
 import pandas as pd
 import matplotlib.pyplot as plt
+
+
 data = pd.read_csv('covtype.csv')
 
 print(data.shape)
 
 
-data = pd.read_csv('covtype.csv', sep=';')
+data = pd.read_csv('covtype.csv', index_col='Cover_Type(Class)', sep=';')
 print(data.head())
 
 print(data.shape)
