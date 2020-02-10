@@ -3,6 +3,8 @@ from functions import *
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# SINGLE VARIABLE ANALYSIS
+
 data = pd.read_csv('covtype.csv', index_col='Cover_Type(Class)', sep=';')  # import the dataset into the dataframe, using pandas
 print(data.head()) # prints/outputs table contents into console. By default, only the first 5 records
 print(data.head(7)) # prints/outputs table contents into console. By default, only the first 5 records
@@ -18,12 +20,25 @@ print(len(col)) # gets (and then prints) the number of elements in the series 'E
 
 print(data.values) # get the dataframe into numpy array format, to use at a later time with scikit learn package
 
-# fig = plt.figure(figsize=(10, 7)) # plot figure, specifying the size, but without specifying the number
-# mv = {}
-# for var in data:
-#     mv[var] = data[var].isna().sum()
-#     bar_chart(plt.gca(), mv.keys(), mv.values(), 'Number of missing values per variable', var, 'nr. missing values')
-# fig.tight_layout()
-# plt.show() # show the plotted data
+fig = plt.figure(figsize=(10, 7)) # plot figure, specifying the size, but without specifying the number
+mv = {}
 
-print(data.dtypes)
+# Missing values
+for var in data:
+    mv[var] = data[var].isna().sum()
+    bar_chart(plt.gca(), mv.keys(), mv.values(), 'Number of missing values per variable', var, 'nr. missing values')
+fig.tight_layout()
+plt.show() # show the plotted data
+
+print(data.dtypes) # give us the type of the variables
+
+# Variables distribution
+
+# Granularity
+
+# MULTI-VARIABLE ANALYSIS
+# Sparsity
+# Correlation analysis
+
+
+
