@@ -18,10 +18,12 @@ print(len(col)) # gets (and then prints) the number of elements in the series 'E
 
 print(data.values) # get the dataframe into numpy array format, to use at a later time with scikit learn package
 
-fig = plt.figure(figsize=(10, 7)) # plot figure, specifying the size, but without specifying the number
-mv = {}
-for var in data:
-    mv[var] = data[var].isna().sum()
-    bar_chart(plt.gca(), mv.keys(), mv.values(), 'Number of missing values per variable', var, 'nr. missing values')
-fig.tight_layout()
-plt.show() # show the plotted data
+# fig = plt.figure(figsize=(10, 7)) # plot figure, specifying the size, but without specifying the number
+# mv = {}
+# for var in data:
+#     mv[var] = data[var].isna().sum()
+#     bar_chart(plt.gca(), mv.keys(), mv.values(), 'Number of missing values per variable', var, 'nr. missing values')
+# fig.tight_layout()
+# plt.show() # show the plotted data
+
+print(data.dtypes)
