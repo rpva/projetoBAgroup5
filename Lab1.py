@@ -47,29 +47,29 @@ plt.show()
 # (23) singular boxplot for each variable
 
 columns = dataSample.select_dtypes(include='number').columns
-rows, cols = choose_grid(len(columns))
+rows, cols = choose_grid(10) # only the first 10 elements are of interest because the other are binary
 plt.figure()
 
 fig, axs = plt.subplots(rows, cols, figsize=(cols*4, rows*4), squeeze=False)
 i, j = 0, 0
-for n in range(len(columns)):
+for n in range(10):
     axs[i, j].set_title('Boxplot for %s'%columns[n])
     axs[i, j].boxplot(data[columns[n]].dropna().values)
     i, j = (i + 1, 0) if (n+1) % cols == 0 else (i, j + 1)
 fig.tight_layout()
 plt.show()
 
-# (24) histogram for each numeric variable
+# (24) histogram for each numeric variable; without binary variables
 
 columns = dataSample.select_dtypes(include='number').columns
-rows, cols = choose_grid(len(columns))
+rows, cols = choose_grid(10)
 plt.figure()
-fig, axs = plt.subplots(rows, cols, figsize=(cols*4, rows*4), squeeze=False)
+fig, axs = plt.subplots(rows, cols, figsize=(cols*5, rows*3), squeeze=False)
 i, j = 0, 0
-for n in range(len(columns)):
+for n in range(10):
     axs[i, j].set_title('Histogram for %s'%columns[n])
     axs[i, j].set_xlabel(columns[n])
-    axs[i, j].set_ylabel("probability")
+    axs[i, j].set_ylabel("probability") # we have different units for each variable. how can we change that??
     axs[i, j].hist(data[columns[n]].dropna().values, 'auto')
     i, j = (i + 1, 0) if (n+1) % cols == 0 else (i, j + 1)
 fig.tight_layout()
