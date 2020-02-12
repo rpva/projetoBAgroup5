@@ -1,4 +1,5 @@
 from functions import *
+from pandas.plotting import register_matplotlib_converters
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,8 +10,8 @@ import scipy.stats as _stats
 
 data = pd.read_csv('covtype.csv', sep=';') # import the dataset into the dataframe, using pandas
 
-# we use a sample with 10% of the data
-dataSample = data.sample(frac=0.1)
+# we use a sample with 10% of the data (or just 1% ?)
+dataSample = data.sample(frac=0.01)
 
 # some notes regarding DSLabs0
 # print(data.head()) # prints/outputs table contents into console. By default, only the first 5 records
@@ -109,10 +110,46 @@ fig.tight_layout()
 plt.show()
 
 # Granularity
+#(28) histograms for categorical variables - bar charts (counting the frequency of each value for each variable)
+columns = dataSample.select_dtypes(include='number').columns
+rows = 4  # We only want the first 4 columns too keep them well spaced
+cols = 4  # We only want the first 4 rows too keep them well spaced
+plt.figure()
+fig, axs = plt.subplots(rows, cols, figsize=(cols*4.5, rows*2.5), squeeze=True) # 4.5 width and 2.5 length
+bins = range(5, 100, 25)  # From L to R, the number of bins increases by 25 (the granularity increases)
+for i in range(0, 4, 1):
+    for j in range(len(bins)):
+        axs[i, j].set_title('Histogram for %s' % columns[i])
+        axs[i, j].set_xlabel(columns[i])
+        axs[i, j].set_ylabel("occurrences")
+        axs[i, j].hist(dataSample[columns[i]].dropna().values, bins[j])
+fig.tight_layout()
+plt.show()
 
-# MULTI-VARIABLE ANALYSIS
-# Sparsity
-# Correlation analysis
+#MULTI-VARIABLE ANALYSIS
 
+# (1) Sparsity-A dataset is said to be sparse when most of the space defined by its variables is not covered by the instances in the dataset
+register_matplotlib_converters()
+columns = dataSample.select_dtypes(include='number').columns
+rows = 4  # We only want the first 4 columns too keep them well spaced
+cols = 4  # We only want the first 4 rows too keep them well spaced
+plt.figure()
+fig, axs = plt.subplots(rows, cols, figsize=(cols*5, rows*3), squeeze=True) # 5 width and 3 length
+for i in range(4):
+    var1 = columns[i]
+    for j in range(i+1, 5):
+        var2 = columns[j]
+        axs[i, j-1].set_title("%s x %s" % (var1, var2))
+        axs[i, j-1].set_xlabel(var1)
+        axs[i, j-1].set_ylabel(var2)
+        axs[i, j-1].scatter(dataSample[var1], dataSample[var2])
+fig.tight_layout()
+plt.show()
 
-
+# (2) Correlation analysis-  In the presence of large dimensionality, a heatmap is easier to analyze Sparsity
+fig = plt.figure(figsize=[12, 12])
+data1 = dataSample.iloc[:, list(range(10))]  # This selects the first 10 columns
+corr_mtx = data1.corr()
+sns.heatmap(corr_mtx, xticklabels=corr_mtx.columns, yticklabels=corr_mtx.columns, annot=True, cmap='Blues')
+plt.title('Correlation analysis')
+plt.show()
