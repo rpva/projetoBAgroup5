@@ -2,13 +2,9 @@ from functions import *
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns # necessário instalar package da primeira vez que correrem o código
+import scipy.stats as _stats
 
-from pandas.plotting import register_matplotlib_converters # new import LAB2
-from sklearn.preprocessing import Normalizer # new import LAB2
-from sklearn.preprocessing import OneHotEncoder # new import LAB2
-
-
-# -------------------- LAB1 - DATA EXPLORATION
 # SINGLE VARIABLE ANALYSIS
 
 # data = pd.read_csv('covtype.csv', index_col='Cover_Type(Class)', sep=';')  # import the dataset into the dataframe, using pandas
@@ -35,7 +31,6 @@ fig = plt.figure(figsize=(10, 7)) # plot figure, specifying the size, but withou
 mv = {}
 
 # Missing values
-
 for var in data:
     mv[var] = data[var].isna().sum()
     bar_chart(plt.gca(), mv.keys(), mv.values(), 'Number of missing values per variable', var, 'nr. missing values')
@@ -97,6 +92,21 @@ for n in range(len(columns)):
 fig.tight_layout()
 plt.show()
 
+# (26) distribution that best fits the data
+columns = dataSample.select_dtypes(include='number').columns
+rows, cols = choose_grid(len(columns))
+plt.figure()
+fig, axs = plt.subplots(rows, cols, figsize=(cols*4, rows*4), squeeze=False)
+i, j = 0, 0
+for n in range(len(columns)):
+    axs[i, j].set_title('Histogram with trend for %s'%columns[n])
+    axs[i, j].set_ylabel("probability")
+    sns.distplot(dataSample[columns[n]].dropna().values, norm_hist=True, ax=axs[i, j], axlabel=columns[n]) # é indiferente usar data ou dataSample, pois só se está a aceder às colunas -> que são as variáveis da data frame
+    # dataSample computa muito mais depressa, mas dá warning
+    i, j = (i + 1, 0) if (n+1) % cols == 0 else (i, j + 1)
+fig.tight_layout()
+plt.show()
+
 # Granularity
 
 # MULTI-VARIABLE ANALYSIS
@@ -104,5 +114,6 @@ plt.show()
 # Sparsity
 
 # Correlation analysis
+
 
 
