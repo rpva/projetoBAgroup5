@@ -1,0 +1,11 @@
+Dúvidas:
+Lab1 (26) - alterar as * das colunas e linhas; colocar só as 1ªs 10 variáveis, as outras são binárias
+(ver qual é o warning que dá)
+
+- corrigir o ponto 22
+
+variável cover type nao aperece nos gráficos??
+as variaveis binarias sao categóricas??
+
+Lab2 (26) - remover variable class
+(28) - perceber o gráfico
