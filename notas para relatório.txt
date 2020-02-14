@@ -1,0 +1,8 @@
+atribuir numeração aos gráficos?
+
+Lab1 - (27)
+dimensão da amostra a usar: 10 ou 1%?
+há 4 possibilidades de distribuição para fazer o ajuste aos dados
+código fica preparado para as 4, mas temos de ver os gráficos individuais para perceber qual o melhor ajuste a cada histograma
+
+Lab2 (e resto?) - precisamos de fixar a seed
