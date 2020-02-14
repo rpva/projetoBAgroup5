@@ -1,8 +1,22 @@
-atribuir numeração aos gráficos?
+Ideias:
+- atribuir numeração aos gráficos?
+- Lab2 (e resto?) - precisamos de fixar a seed
+variável cover type nao aperece nos gráficos??
+as variaveis binarias sao categóricas??
 
-Lab1 - (27)
-dimensão da amostra a usar: 10 ou 1%?
+
+Dúvidas:
+- Lab1 (26) - alterar as * das colunas e linhas; colocar só as 1ªs 10 variáveis, as outras são binárias
+(ver qual é o warning que dá)
+
+
+Lab1
+- corrigir o ponto 22
+- (27) dimensão da amostra a usar: 10 ou 1%?
 há 4 possibilidades de distribuição para fazer o ajuste aos dados
 código fica preparado para as 4, mas temos de ver os gráficos individuais para perceber qual o melhor ajuste a cada histograma
 
-Lab2 (e resto?) - precisamos de fixar a seed
+
+Lab2
+- (26) remover variable class
+- (28) perceber o gráfico

@@ -11,7 +11,7 @@ import scipy.stats as _stats
 data = pd.read_csv('covtype.csv', sep=';') # import the dataset into the dataframe, using pandas
 
 # we use a sample with 10% of the data
-dataSample = data.sample(frac=0.005)
+dataSample = data.sample(frac=0.1)
 
 # some notes regarding DSLabs0
 # print(data.head()) # prints/outputs table contents into console. By default, only the first 5 records
@@ -47,6 +47,7 @@ dataSample = data.sample(frac=0.005)
 # dataSample.boxplot(figsize=(10, 6))
 # plt.show()
 
+
 # (23) singular boxplot for each variable
 # columns = dataSample.select_dtypes(include='number').columns
 # rows, cols = choose_grid(10) # only the first 10 elements are of interest because the other are binary
@@ -60,6 +61,7 @@ dataSample = data.sample(frac=0.005)
 #     i, j = (i + 1, 0) if (n+1) % cols == 0 else (i, j + 1)
 # fig.tight_layout()
 # plt.show()
+
 
 # (24) histogram for each numeric variable; without binary variables
 # columns = dataSample.select_dtypes(include='number').columns
@@ -76,6 +78,7 @@ dataSample = data.sample(frac=0.005)
 # fig.tight_layout()
 # plt.show()
 
+
 # (25) histograms for categorical variables - bar charts (counting the frequency of each value for each variable)
 # it doesn't give anything because we don't have categorical variables, they are all numerical
 # columns = dataSample.select_dtypes(include='category').columns
@@ -89,6 +92,7 @@ dataSample = data.sample(frac=0.005)
 #     i, j = (i + 1, 0) if (n+1) % cols == 0 else (i, j + 1)
 # fig.tight_layout()
 # plt.show()
+
 
 # (26) distribution that best fits the data
 # data1 = dataSample.iloc[:, list(range(10))]  # This selects the first 10 columns
