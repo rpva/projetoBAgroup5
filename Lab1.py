@@ -215,6 +215,7 @@ plt.show()
 
 # Granularity
 # (28) histograms for categorical variables - bar charts (counting the frequency of each value for each variable)
+dataSample = data.sample(frac=0.1)
 columns = dataSample.select_dtypes(include='number').columns
 rows = 4  # We only want the first 4 columns too keep them well spaced
 cols = 4  # We only want the first 4 rows too keep them well spaced
@@ -235,15 +236,16 @@ plt.show()
 
 # (1) Sparsity-A dataset is said to be sparse when most of the space defined by its variables is not covered
 # by the instances in the dataset
+dataSample = data.sample(frac=0.005)
 register_matplotlib_converters()
 columns = dataSample.select_dtypes(include='number').columns
-rows = 4  # We only want the first 4 columns too keep them well spaced
-cols = 4  # We only want the first 4 rows too keep them well spaced
+rows = 10  # We only want the first 4 columns too keep them well spaced
+cols = 10  # We only want the first 4 rows too keep them well spaced
 plt.figure()
 fig, axs = plt.subplots(rows, cols, figsize=(cols*5, rows*3), squeeze=True)  # 5 width and 3 length
-for i in range(4):
+for i in range(9):
     var1 = columns[i]
-    for j in range(i+1, 5):
+    for j in range(i+1, 10):
         var2 = columns[j]
         axs[i, j-1].set_title("%s x %s" % (var1, var2))
         axs[i, j-1].set_xlabel(var1)
@@ -253,6 +255,7 @@ fig.tight_layout()
 plt.show()
 
 # (2) Correlation analysis-  In the presence of large dimensionality, a heatmap is easier to analyze Sparsity
+dataSample = data.sample(frac=0.1)
 fig = plt.figure(figsize=[12, 12])
 data1 = dataSample.iloc[:, list(range(10))]  # This selects the first 10 columns
 corr_mtx = data1.corr()
