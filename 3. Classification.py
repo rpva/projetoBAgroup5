@@ -144,43 +144,44 @@ def model_performance(tstY, prdY, n, d=' ', k=' ', n_name='n', d_name=' ', k_nam
 # plt.show()
 #
 
-# # Gradient Boosting
-# def GB(data1, save=None):
-#     from sklearn.ensemble import GradientBoostingClassifier
-#     print('Gradient Boosting Started \n')
-#       # Existing error in Cover_Type(Class)
-#     y: np.ndarray = data1.pop('Cover_Type(Class)').values
-#     X: np.ndarray = data1.values
-#     labels = pd.unique(y)
-#
-#     X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, stratify=y)
-#
-#     estimators = [5, 50, 100, 150, 200, 300]
-#     l_rate = [0.1]
-#     max_depth = [2, 10, 20]
-#
-#     yvalues = []
-#     for l in range(len(l_rate)):
-#         values = {}
-#         for d in range(len(max_depth)):
-#             yvalues = []
-#             for e in range(len(estimators)):
-#                 gbc = GradientBoostingClassifier(n_estimators=estimators[e], learning_rate=l_rate[l],
-#                                                  max_depth=max_depth[d])
-#                 gbc.fit(X_train, y_train)
-#                 gbc.score(X_test, y_test)
-#                 prdY = gbc.predict(X_test)
-#
-#                 yvalues.append(metrics.accuracy_score(y_test, prdY))
-#                 model_performance(y_test, prdY, estimators[e], max_depth[d], l_rate[l], n_name='  Estim:',
-#                                   d_name='depth:', k_name='l_rate:')  # prints the data of the graph
-#         values[d] = yvalues
-#         plt.figure()
-#         multiple_line_chart(plt.gca(), estimators, values, 'Gradient Boosting estimators', 'n', 'accuracy',
-#                             percentage=False)  # changed to false
-#         if save == 'p':
-#             plt.savefig('Gradient_Boosting.png')
-#         plt.show()
-#
-#
-# GB(dataSample, 'p')
+# Gradient Boosting
+def GB(data1, save=None):
+    from sklearn.ensemble import GradientBoostingClassifier
+    print('Gradient Boosting Started \n')
+      # Existing error in Cover_Type(Class)
+    # y: np.ndarray = data1.pop('Cover_Type(Class)').values
+    # X: np.ndarray = data1.values
+    labels = pd.unique(y)
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, stratify=y)
+
+    estimators = [5, 50, 100, 150, 200, 300]
+    l_rate = [0.1]
+    max_depth = [2, 10, 20]
+
+    yvalues = []
+    for l in range(len(l_rate)):
+        values = {}
+        for d in range(len(max_depth)):
+            yvalues = []
+            for e in range(len(estimators)):
+                gbc = GradientBoostingClassifier(n_estimators=estimators[e], learning_rate=l_rate[l],
+                                                 max_depth=max_depth[d])
+                gbc.fit(X_train, y_train)
+                gbc.score(X_test, y_test)
+                prdY = gbc.predict(X_test)
+
+                yvalues.append(metrics.accuracy_score(y_test, prdY))
+                # following code prints the data of the graph
+                model_performance(y_test, prdY, estimators[e], max_depth[d], l_rate[l], n_name='  Estim:',
+                                  d_name='depth:', k_name='l_rate:')
+        values[d] = yvalues
+        plt.figure()
+        multiple_line_chart(plt.gca(), estimators, values, 'Gradient Boosting estimators', 'n', 'accuracy',
+                            percentage=False)  # changed to false
+        if save == 'p':
+            plt.savefig('Gradient_Boosting.png')
+        plt.show()
+
+
+GB(dataSample, 'p')
