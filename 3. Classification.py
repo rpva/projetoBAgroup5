@@ -14,7 +14,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 # Training Strategy: hold-out (train_test_split): used in the presence of large thousands of records;
 # Training method by order:
-#           1.Naive Bayers
+#           1.Naive Bayes
 #           2.KNN
 #           3.Decision Trees
 #           4.Random Forests
@@ -43,33 +43,33 @@ def model_performance(tstY, prdY, n, d=' ', k=' ', n_name='n', d_name=' ', k_nam
           n_name, n, d_name, d, k_name, k)
 
 
-# # Naive Bayes
-# clf = GaussianNB()
-# clf.fit(trnX, trnY)
-# prdY = clf.predict(tstX)
-# cnf_mtx = metrics.confusion_matrix(tstY, prdY, labels)
+# Naive Bayes
+clf = GaussianNB()
+clf.fit(trnX, trnY)
+prdY = clf.predict(tstX)
+cnf_mtx = metrics.confusion_matrix(tstY, prdY, labels)
+plt.figure()
+plot_confusion_matrix(plt.gca(), cnf_mtx, labels)
+plt.show()
+# Following part NOT working for unbalanced data due to negative values, uncomment for treted data testing
+# estimators = {'GaussianNB': GaussianNB(),
+#               'MultinomialNB': MultinomialNB(),
+#               'BernoulyNB': BernoulliNB()}
+# xvalues = []
+# yvalues = []
+# for clf in estimators:
+#     xvalues.append(clf)
+#     estimators[clf].fit(trnX, trnY)
+#     prdY = estimators[clf].predict(tstX)
+#     yvalues.append(metrics.accuracy_score(tstY, prdY))
 # plt.figure()
-# plot_confusion_matrix(plt.gca(), cnf_mtx, labels)
+# bar_chart(plt.gca(), xvalues, yvalues, 'Comparison of Naive Bayes Models', '', 'Accuracy', percentage=True)
 # plt.show()
-# # Following part NOT working for unbalanced data due to negative values, uncomment for treted data testing
-# # estimators = {'GaussianNB': GaussianNB(),
-# #               'MultinomialNB': MultinomialNB(),
-# #               'BernoulyNB': BernoulliNB()}
-# # xvalues = []
-# # yvalues = []
-# # for clf in estimators:
-# #     xvalues.append(clf)
-# #     estimators[clf].fit(trnX, trnY)
-# #     prdY = estimators[clf].predict(tstX)
-# #     yvalues.append(metrics.accuracy_score(tstY, prdY))
-# # plt.figure()
-# # bar_chart(plt.gca(), xvalues, yvalues, 'Comparison of Naive Bayes Models', '', 'Accuracy', percentage=True)
-# # plt.show()
-#
+
 # # KNN
 # dataSample = data.sample(frac=0.5)
 # nvalues = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-# dist = ['Manhattan', 'Euclidean', 'Chebyshev']
+# dist = ['manhattan', 'euclidean', 'chebyshev']
 # values = {}
 # for d in dist:
 #     yvalues = []
@@ -82,30 +82,30 @@ def model_performance(tstY, prdY, n, d=' ', k=' ', n_name='n', d_name=' ', k_nam
 # plt.figure()
 # multiple_line_chart(plt.gca(), nvalues, values, 'KNN variants', 'Number of Neighbors (K)', 'Accuracy', percentage=True)
 # plt.show()
-#
-# Decision Trees
-min_samples_leaf = [.05, .025, .01, .0075, .005, .0025, .001]
-max_depths = [5, 10, 25, 50]
-criteria = ['entropy', 'gini']
 
-plt.figure()
-fig, axs = plt.subplots(1, 2, figsize=(16, 4), squeeze=False)
-for k in range(len(criteria)):
-    f = criteria[k]
-    values = {}
-    for d in max_depths:
-        yvalues = []
-        for n in min_samples_leaf:
-            tree = DecisionTreeClassifier(min_samples_leaf=n, max_depth=d, criterion=f)
-            tree.fit(trnX, trnY)
-            prdY = tree.predict(tstX)
-            yvalues.append(metrics.accuracy_score(tstY, prdY))
-            # print(metrics.accuracy_score(tstY, prdY))
-        values[d] = yvalues
-        multiple_line_chart(axs[0, k], min_samples_leaf, values, 'Decision Trees with %s criteria' % f,
-                            'Number of Estimators'
-                            , 'Accuracy', percentage=True)
-plt.show()
+# # Decision Trees
+# min_samples_leaf = [.05, .025, .01, .0075, .005, .0025, .001]
+# max_depths = [5, 10, 25, 50]
+# criteria = ['entropy', 'gini']
+#
+# plt.figure()
+# fig, axs = plt.subplots(1, 2, figsize=(16, 4), squeeze=False)
+# for k in range(len(criteria)):
+#     f = criteria[k]
+#     values = {}
+#     for d in max_depths:
+#         yvalues = []
+#         for n in min_samples_leaf:
+#             tree = DecisionTreeClassifier(min_samples_leaf=n, max_depth=d, criterion=f)
+#             tree.fit(trnX, trnY)
+#             prdY = tree.predict(tstX)
+#             yvalues.append(metrics.accuracy_score(tstY, prdY))
+#             # print(metrics.accuracy_score(tstY, prdY))
+#         values[d] = yvalues
+#         multiple_line_chart(axs[0, k], min_samples_leaf, values, 'Decision Trees with %s criteria' % f,
+#                             'Number of Estimators'
+#                             , 'Accuracy', percentage=True)
+# plt.show()
 
 # Following lines show the learned tree, using the graphviz package
 # NOT WORKING
