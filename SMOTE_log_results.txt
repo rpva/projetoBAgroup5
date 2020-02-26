@@ -1,0 +1,198 @@
+Naive Bayes Started 
+
+Accuracy : 0.4742  precision:  0.5799  sensibility: 0.4755
+KNN Started 
+
+Accuracy : 0.8979  precision:  0.8953  sensibility: 0.8974 Neighbours:  1 dist: manhattan
+Accuracy : 0.8731  precision:  0.8694  sensibility: 0.8726 Neighbours:  3 dist: manhattan
+Accuracy : 0.8588  precision:  0.8544  sensibility: 0.8584 Neighbours:  5 dist: manhattan
+Accuracy : 0.8463  precision:  0.8420  sensibility: 0.8459 Neighbours:  7 dist: manhattan
+Accuracy : 0.8340  precision:  0.8286  sensibility: 0.8336 Neighbours:  9 dist: manhattan
+Accuracy : 0.8276  precision:  0.8220  sensibility: 0.8271 Neighbours:  11 dist: manhattan
+Accuracy : 0.8210  precision:  0.8151  sensibility: 0.8205 Neighbours:  13 dist: manhattan
+Accuracy : 0.8175  precision:  0.8116  sensibility: 0.8170 Neighbours:  15 dist: manhattan
+Accuracy : 0.8099  precision:  0.8044  sensibility: 0.8094 Neighbours:  17 dist: manhattan
+Accuracy : 0.8072  precision:  0.8021  sensibility: 0.8067 Neighbours:  19 dist: manhattan
+Accuracy : 0.8874  precision:  0.8845  sensibility: 0.8869 Neighbours:  1 dist: euclidean
+Accuracy : 0.8665  precision:  0.8623  sensibility: 0.8661 Neighbours:  3 dist: euclidean
+Accuracy : 0.8527  precision:  0.8480  sensibility: 0.8523 Neighbours:  5 dist: euclidean
+Accuracy : 0.8404  precision:  0.8353  sensibility: 0.8400 Neighbours:  7 dist: euclidean
+Accuracy : 0.8306  precision:  0.8256  sensibility: 0.8302 Neighbours:  9 dist: euclidean
+Accuracy : 0.8215  precision:  0.8158  sensibility: 0.8210 Neighbours:  11 dist: euclidean
+Accuracy : 0.8150  precision:  0.8093  sensibility: 0.8145 Neighbours:  13 dist: euclidean
+Accuracy : 0.8062  precision:  0.8003  sensibility: 0.8057 Neighbours:  15 dist: euclidean
+Accuracy : 0.7991  precision:  0.7934  sensibility: 0.7986 Neighbours:  17 dist: euclidean
+Accuracy : 0.7954  precision:  0.7901  sensibility: 0.7949 Neighbours:  19 dist: euclidean
+Accuracy : 0.8793  precision:  0.8758  sensibility: 0.8788 Neighbours:  1 dist: chebyshev
+Accuracy : 0.8495  precision:  0.8445  sensibility: 0.8491 Neighbours:  3 dist: chebyshev
+Accuracy : 0.8386  precision:  0.8328  sensibility: 0.8381 Neighbours:  5 dist: chebyshev
+Accuracy : 0.8253  precision:  0.8195  sensibility: 0.8248 Neighbours:  7 dist: chebyshev
+Accuracy : 0.8123  precision:  0.8061  sensibility: 0.8118 Neighbours:  9 dist: chebyshev
+Accuracy : 0.8017  precision:  0.7947  sensibility: 0.8011 Neighbours:  11 dist: chebyshev
+Accuracy : 0.7959  precision:  0.7894  sensibility: 0.7954 Neighbours:  13 dist: chebyshev
+Accuracy : 0.7919  precision:  0.7861  sensibility: 0.7913 Neighbours:  15 dist: chebyshev
+Accuracy : 0.7821  precision:  0.7768  sensibility: 0.7816 Neighbours:  17 dist: chebyshev
+Accuracy : 0.7784  precision:  0.7732  sensibility: 0.7779 Neighbours:  19 dist: chebyshev
+Decision Trees Started 
+
+Accuracy : 0.6093  precision:  0.6150  sensibility: 0.6091   min_samples_leaf: 0.05 depth: 5 criteria: entropy
+Accuracy : 0.6253  precision:  0.6378  sensibility: 0.6259   min_samples_leaf: 0.025 depth: 5 criteria: entropy
+Accuracy : 0.6465  precision:  0.6515  sensibility: 0.6467   min_samples_leaf: 0.01 depth: 5 criteria: entropy
+Accuracy : 0.6401  precision:  0.6449  sensibility: 0.6401   min_samples_leaf: 0.0075 depth: 5 criteria: entropy
+Accuracy : 0.6423  precision:  0.6472  sensibility: 0.6424   min_samples_leaf: 0.005 depth: 5 criteria: entropy
+Accuracy : 0.6453  precision:  0.6505  sensibility: 0.6454   min_samples_leaf: 0.0025 depth: 5 criteria: entropy
+Accuracy : 0.6460  precision:  0.6510  sensibility: 0.6461   min_samples_leaf: 0.001 depth: 5 criteria: entropy
+Accuracy : 0.6093  precision:  0.6150  sensibility: 0.6091   min_samples_leaf: 0.05 depth: 10 criteria: entropy
+Accuracy : 0.6418  precision:  0.6399  sensibility: 0.6426   min_samples_leaf: 0.025 depth: 10 criteria: entropy
+Accuracy : 0.6947  precision:  0.6915  sensibility: 0.6945   min_samples_leaf: 0.01 depth: 10 criteria: entropy
+Accuracy : 0.7099  precision:  0.7072  sensibility: 0.7097   min_samples_leaf: 0.0075 depth: 10 criteria: entropy
+Accuracy : 0.7215  precision:  0.7147  sensibility: 0.7215   min_samples_leaf: 0.005 depth: 10 criteria: entropy
+Accuracy : 0.7464  precision:  0.7427  sensibility: 0.7466   min_samples_leaf: 0.0025 depth: 10 criteria: entropy
+Accuracy : 0.7725  precision:  0.7676  sensibility: 0.7722   min_samples_leaf: 0.001 depth: 10 criteria: entropy
+Accuracy : 0.6093  precision:  0.6150  sensibility: 0.6091   min_samples_leaf: 0.05 depth: 25 criteria: entropy
+Accuracy : 0.6418  precision:  0.6399  sensibility: 0.6426   min_samples_leaf: 0.025 depth: 25 criteria: entropy
+Accuracy : 0.6947  precision:  0.6915  sensibility: 0.6945   min_samples_leaf: 0.01 depth: 25 criteria: entropy
+Accuracy : 0.7099  precision:  0.7072  sensibility: 0.7097   min_samples_leaf: 0.0075 depth: 25 criteria: entropy
+Accuracy : 0.7206  precision:  0.7137  sensibility: 0.7205   min_samples_leaf: 0.005 depth: 25 criteria: entropy
+Accuracy : 0.7538  precision:  0.7495  sensibility: 0.7538   min_samples_leaf: 0.0025 depth: 25 criteria: entropy
+Accuracy : 0.7825  precision:  0.7782  sensibility: 0.7823   min_samples_leaf: 0.001 depth: 25 criteria: entropy
+Accuracy : 0.6093  precision:  0.6150  sensibility: 0.6091   min_samples_leaf: 0.05 depth: 50 criteria: entropy
+Accuracy : 0.6418  precision:  0.6399  sensibility: 0.6426   min_samples_leaf: 0.025 depth: 50 criteria: entropy
+Accuracy : 0.6947  precision:  0.6915  sensibility: 0.6945   min_samples_leaf: 0.01 depth: 50 criteria: entropy
+Accuracy : 0.7099  precision:  0.7072  sensibility: 0.7097   min_samples_leaf: 0.0075 depth: 50 criteria: entropy
+Accuracy : 0.7206  precision:  0.7137  sensibility: 0.7205   min_samples_leaf: 0.005 depth: 50 criteria: entropy
+Accuracy : 0.7538  precision:  0.7495  sensibility: 0.7538   min_samples_leaf: 0.0025 depth: 50 criteria: entropy
+Accuracy : 0.7809  precision:  0.7766  sensibility: 0.7808   min_samples_leaf: 0.001 depth: 50 criteria: entropy
+Accuracy : 0.6172  precision:  0.6579  sensibility: 0.6181   min_samples_leaf: 0.05 depth: 5 criteria: gini
+Accuracy : 0.6305  precision:  0.6236  sensibility: 0.6311   min_samples_leaf: 0.025 depth: 5 criteria: gini
+Accuracy : 0.6605  precision:  0.6679  sensibility: 0.6601   min_samples_leaf: 0.01 depth: 5 criteria: gini
+Accuracy : 0.6623  precision:  0.6680  sensibility: 0.6620   min_samples_leaf: 0.0075 depth: 5 criteria: gini
+Accuracy : 0.6632  precision:  0.6750  sensibility: 0.6627   min_samples_leaf: 0.005 depth: 5 criteria: gini
+Accuracy : 0.6644  precision:  0.6755  sensibility: 0.6639   min_samples_leaf: 0.0025 depth: 5 criteria: gini
+Accuracy : 0.6649  precision:  0.6770  sensibility: 0.6644   min_samples_leaf: 0.001 depth: 5 criteria: gini
+Accuracy : 0.6172  precision:  0.6579  sensibility: 0.6181   min_samples_leaf: 0.05 depth: 10 criteria: gini
+Accuracy : 0.6367  precision:  0.6260  sensibility: 0.6369   min_samples_leaf: 0.025 depth: 10 criteria: gini
+Accuracy : 0.6841  precision:  0.6798  sensibility: 0.6842   min_samples_leaf: 0.01 depth: 10 criteria: gini
+Accuracy : 0.6979  precision:  0.6951  sensibility: 0.6975   min_samples_leaf: 0.0075 depth: 10 criteria: gini
+Accuracy : 0.7179  precision:  0.7127  sensibility: 0.7176   min_samples_leaf: 0.005 depth: 10 criteria: gini
+Accuracy : 0.7387  precision:  0.7344  sensibility: 0.7386   min_samples_leaf: 0.0025 depth: 10 criteria: gini
+Accuracy : 0.7602  precision:  0.7596  sensibility: 0.7600   min_samples_leaf: 0.001 depth: 10 criteria: gini
+Accuracy : 0.6172  precision:  0.6579  sensibility: 0.6181   min_samples_leaf: 0.05 depth: 25 criteria: gini
+Accuracy : 0.6367  precision:  0.6260  sensibility: 0.6369   min_samples_leaf: 0.025 depth: 25 criteria: gini
+Accuracy : 0.6841  precision:  0.6798  sensibility: 0.6842   min_samples_leaf: 0.01 depth: 25 criteria: gini
+Accuracy : 0.6979  precision:  0.6951  sensibility: 0.6975   min_samples_leaf: 0.0075 depth: 25 criteria: gini
+Accuracy : 0.7179  precision:  0.7120  sensibility: 0.7178   min_samples_leaf: 0.005 depth: 25 criteria: gini
+Accuracy : 0.7560  precision:  0.7517  sensibility: 0.7560   min_samples_leaf: 0.0025 depth: 25 criteria: gini
+Accuracy : 0.7884  precision:  0.7850  sensibility: 0.7882   min_samples_leaf: 0.001 depth: 25 criteria: gini
+Accuracy : 0.6172  precision:  0.6579  sensibility: 0.6181   min_samples_leaf: 0.05 depth: 50 criteria: gini
+Accuracy : 0.6367  precision:  0.6260  sensibility: 0.6369   min_samples_leaf: 0.025 depth: 50 criteria: gini
+Accuracy : 0.6841  precision:  0.6798  sensibility: 0.6842   min_samples_leaf: 0.01 depth: 50 criteria: gini
+Accuracy : 0.6979  precision:  0.6951  sensibility: 0.6975   min_samples_leaf: 0.0075 depth: 50 criteria: gini
+Accuracy : 0.7179  precision:  0.7120  sensibility: 0.7178   min_samples_leaf: 0.005 depth: 50 criteria: gini
+Accuracy : 0.7560  precision:  0.7517  sensibility: 0.7560   min_samples_leaf: 0.0025 depth: 50 criteria: gini
+Accuracy : 0.7875  precision:  0.7840  sensibility: 0.7874   min_samples_leaf: 0.001 depth: 50 criteria: gini
+Random Forests Started 
+
+Accuracy : 0.6891  precision:  0.6765  sensibility: 0.6891  n_estimators: 5 max_depth: 5 max_features: sqrt
+Accuracy : 0.6920  precision:  0.6829  sensibility: 0.6923  n_estimators: 10 max_depth: 5 max_features: sqrt
+Accuracy : 0.6854  precision:  0.6792  sensibility: 0.6856  n_estimators: 25 max_depth: 5 max_features: sqrt
+Accuracy : 0.7188  precision:  0.7162  sensibility: 0.7186  n_estimators: 50 max_depth: 5 max_features: sqrt
+Accuracy : 0.7104  precision:  0.7087  sensibility: 0.7105  n_estimators: 75 max_depth: 5 max_features: sqrt
+Accuracy : 0.7173  precision:  0.7125  sensibility: 0.7172  n_estimators: 100 max_depth: 5 max_features: sqrt
+Accuracy : 0.7139  precision:  0.7080  sensibility: 0.7137  n_estimators: 150 max_depth: 5 max_features: sqrt
+Accuracy : 0.7078  precision:  0.7038  sensibility: 0.7077  n_estimators: 200 max_depth: 5 max_features: sqrt
+Accuracy : 0.7122  precision:  0.7082  sensibility: 0.7120  n_estimators: 250 max_depth: 5 max_features: sqrt
+Accuracy : 0.7151  precision:  0.7102  sensibility: 0.7148  n_estimators: 300 max_depth: 5 max_features: sqrt
+Accuracy : 0.7756  precision:  0.7706  sensibility: 0.7752  n_estimators: 5 max_depth: 10 max_features: sqrt
+Accuracy : 0.7857  precision:  0.7849  sensibility: 0.7855  n_estimators: 10 max_depth: 10 max_features: sqrt
+Accuracy : 0.8044  precision:  0.8025  sensibility: 0.8040  n_estimators: 25 max_depth: 10 max_features: sqrt
+Accuracy : 0.8103  precision:  0.8088  sensibility: 0.8100  n_estimators: 50 max_depth: 10 max_features: sqrt
+Accuracy : 0.8047  precision:  0.8042  sensibility: 0.8045  n_estimators: 75 max_depth: 10 max_features: sqrt
+Accuracy : 0.8109  precision:  0.8098  sensibility: 0.8107  n_estimators: 100 max_depth: 10 max_features: sqrt
+Accuracy : 0.8084  precision:  0.8066  sensibility: 0.8081  n_estimators: 150 max_depth: 10 max_features: sqrt
+Accuracy : 0.8081  precision:  0.8074  sensibility: 0.8078  n_estimators: 200 max_depth: 10 max_features: sqrt
+Accuracy : 0.8109  precision:  0.8110  sensibility: 0.8107  n_estimators: 250 max_depth: 10 max_features: sqrt
+Accuracy : 0.8109  precision:  0.8103  sensibility: 0.8107  n_estimators: 300 max_depth: 10 max_features: sqrt
+Accuracy : 0.8648  precision:  0.8617  sensibility: 0.8646  n_estimators: 5 max_depth: 25 max_features: sqrt
+Accuracy : 0.8803  precision:  0.8779  sensibility: 0.8801  n_estimators: 10 max_depth: 25 max_features: sqrt
+Accuracy : 0.8920  precision:  0.8895  sensibility: 0.8917  n_estimators: 25 max_depth: 25 max_features: sqrt
+Accuracy : 0.8967  precision:  0.8944  sensibility: 0.8964  n_estimators: 50 max_depth: 25 max_features: sqrt
+Accuracy : 0.9004  precision:  0.8984  sensibility: 0.9001  n_estimators: 75 max_depth: 25 max_features: sqrt
+Accuracy : 0.8962  precision:  0.8938  sensibility: 0.8958  n_estimators: 100 max_depth: 25 max_features: sqrt
+Accuracy : 0.9009  precision:  0.8988  sensibility: 0.9006  n_estimators: 150 max_depth: 25 max_features: sqrt
+Accuracy : 0.9017  precision:  0.8998  sensibility: 0.9014  n_estimators: 200 max_depth: 25 max_features: sqrt
+Accuracy : 0.9004  precision:  0.8981  sensibility: 0.9001  n_estimators: 250 max_depth: 25 max_features: sqrt
+Accuracy : 0.9019  precision:  0.8999  sensibility: 0.9016  n_estimators: 300 max_depth: 25 max_features: sqrt
+Accuracy : 0.8689  precision:  0.8662  sensibility: 0.8686  n_estimators: 5 max_depth: 50 max_features: sqrt
+Accuracy : 0.8797  precision:  0.8778  sensibility: 0.8794  n_estimators: 10 max_depth: 50 max_features: sqrt
+Accuracy : 0.8910  precision:  0.8888  sensibility: 0.8907  n_estimators: 25 max_depth: 50 max_features: sqrt
+Accuracy : 0.9014  precision:  0.8994  sensibility: 0.9011  n_estimators: 50 max_depth: 50 max_features: sqrt
+Accuracy : 0.8975  precision:  0.8954  sensibility: 0.8972  n_estimators: 75 max_depth: 50 max_features: sqrt
+Accuracy : 0.8992  precision:  0.8971  sensibility: 0.8989  n_estimators: 100 max_depth: 50 max_features: sqrt
+Accuracy : 0.9006  precision:  0.8985  sensibility: 0.9003  n_estimators: 150 max_depth: 50 max_features: sqrt
+Accuracy : 0.9007  precision:  0.8986  sensibility: 0.9004  n_estimators: 200 max_depth: 50 max_features: sqrt
+Accuracy : 0.9004  precision:  0.8983  sensibility: 0.9001  n_estimators: 250 max_depth: 50 max_features: sqrt
+Accuracy : 0.9001  precision:  0.8978  sensibility: 0.8998  n_estimators: 300 max_depth: 50 max_features: sqrt
+Accuracy : 0.6428  precision:  0.6473  sensibility: 0.6431  n_estimators: 5 max_depth: 5 max_features: log2
+Accuracy : 0.6848  precision:  0.6742  sensibility: 0.6843  n_estimators: 10 max_depth: 5 max_features: log2
+Accuracy : 0.6880  precision:  0.6860  sensibility: 0.6880  n_estimators: 25 max_depth: 5 max_features: log2
+Accuracy : 0.6976  precision:  0.6931  sensibility: 0.6977  n_estimators: 50 max_depth: 5 max_features: log2
+Accuracy : 0.7009  precision:  0.7015  sensibility: 0.7008  n_estimators: 75 max_depth: 5 max_features: log2
+Accuracy : 0.7077  precision:  0.7051  sensibility: 0.7076  n_estimators: 100 max_depth: 5 max_features: log2
+Accuracy : 0.7126  precision:  0.7074  sensibility: 0.7124  n_estimators: 150 max_depth: 5 max_features: log2
+Accuracy : 0.7110  precision:  0.7085  sensibility: 0.7109  n_estimators: 200 max_depth: 5 max_features: log2
+Accuracy : 0.7114  precision:  0.7065  sensibility: 0.7112  n_estimators: 250 max_depth: 5 max_features: log2
+Accuracy : 0.7196  precision:  0.7173  sensibility: 0.7193  n_estimators: 300 max_depth: 5 max_features: log2
+Accuracy : 0.7639  precision:  0.7597  sensibility: 0.7637  n_estimators: 5 max_depth: 10 max_features: log2
+Accuracy : 0.7914  precision:  0.7882  sensibility: 0.7911  n_estimators: 10 max_depth: 10 max_features: log2
+Accuracy : 0.7978  precision:  0.7952  sensibility: 0.7976  n_estimators: 25 max_depth: 10 max_features: log2
+Accuracy : 0.8025  precision:  0.8013  sensibility: 0.8022  n_estimators: 50 max_depth: 10 max_features: log2
+Accuracy : 0.8049  precision:  0.8039  sensibility: 0.8046  n_estimators: 75 max_depth: 10 max_features: log2
+Accuracy : 0.8067  precision:  0.8050  sensibility: 0.8065  n_estimators: 100 max_depth: 10 max_features: log2
+Accuracy : 0.8087  precision:  0.8078  sensibility: 0.8085  n_estimators: 150 max_depth: 10 max_features: log2
+Accuracy : 0.8092  precision:  0.8084  sensibility: 0.8090  n_estimators: 200 max_depth: 10 max_features: log2
+Accuracy : 0.8069  precision:  0.8071  sensibility: 0.8066  n_estimators: 250 max_depth: 10 max_features: log2
+Accuracy : 0.8071  precision:  0.8058  sensibility: 0.8068  n_estimators: 300 max_depth: 10 max_features: log2
+Accuracy : 0.8669  precision:  0.8644  sensibility: 0.8667  n_estimators: 5 max_depth: 25 max_features: log2
+Accuracy : 0.8771  precision:  0.8745  sensibility: 0.8769  n_estimators: 10 max_depth: 25 max_features: log2
+Accuracy : 0.8903  precision:  0.8880  sensibility: 0.8900  n_estimators: 25 max_depth: 25 max_features: log2
+Accuracy : 0.8957  precision:  0.8934  sensibility: 0.8954  n_estimators: 50 max_depth: 25 max_features: log2
+Accuracy : 0.8970  precision:  0.8948  sensibility: 0.8967  n_estimators: 75 max_depth: 25 max_features: log2
+Accuracy : 0.8980  precision:  0.8957  sensibility: 0.8977  n_estimators: 100 max_depth: 25 max_features: log2
+Accuracy : 0.8979  precision:  0.8956  sensibility: 0.8976  n_estimators: 150 max_depth: 25 max_features: log2
+Accuracy : 0.9021  precision:  0.9003  sensibility: 0.9018  n_estimators: 200 max_depth: 25 max_features: log2
+Accuracy : 0.8995  precision:  0.8974  sensibility: 0.8993  n_estimators: 250 max_depth: 25 max_features: log2
+Accuracy : 0.8989  precision:  0.8966  sensibility: 0.8985  n_estimators: 300 max_depth: 25 max_features: log2
+Accuracy : 0.8647  precision:  0.8624  sensibility: 0.8644  n_estimators: 5 max_depth: 50 max_features: log2
+Accuracy : 0.8798  precision:  0.8777  sensibility: 0.8796  n_estimators: 10 max_depth: 50 max_features: log2
+Accuracy : 0.8950  precision:  0.8929  sensibility: 0.8947  n_estimators: 25 max_depth: 50 max_features: log2
+Accuracy : 0.9002  precision:  0.8979  sensibility: 0.8999  n_estimators: 50 max_depth: 50 max_features: log2
+Accuracy : 0.8965  precision:  0.8943  sensibility: 0.8962  n_estimators: 75 max_depth: 50 max_features: log2
+Accuracy : 0.8999  precision:  0.8979  sensibility: 0.8995  n_estimators: 100 max_depth: 50 max_features: log2
+Accuracy : 0.8992  precision:  0.8971  sensibility: 0.8989  n_estimators: 150 max_depth: 50 max_features: log2
+Accuracy : 0.9019  precision:  0.8998  sensibility: 0.9016  n_estimators: 200 max_depth: 50 max_features: log2
+Accuracy : 0.9026  precision:  0.9007  sensibility: 0.9023  n_estimators: 250 max_depth: 50 max_features: log2
+Accuracy : 0.8995  precision:  0.8974  sensibility: 0.8992  n_estimators: 300 max_depth: 50 max_features: log2
+
+ Gradient Boosting Started 
+
+Accuracy : 0.6371  precision:  0.6254  sensibility: 0.6370   Estim: 5 depth: 2 l_rate: 0.1
+Accuracy : 0.7331  precision:  0.7274  sensibility: 0.7329   Estim: 50 depth: 2 l_rate: 0.1
+Accuracy : 0.7521  precision:  0.7474  sensibility: 0.7519   Estim: 100 depth: 2 l_rate: 0.1
+Accuracy : 0.7685  precision:  0.7630  sensibility: 0.7682   Estim: 150 depth: 2 l_rate: 0.1
+Accuracy : 0.7804  precision:  0.7756  sensibility: 0.7802   Estim: 200 depth: 2 l_rate: 0.1
+Accuracy : 0.7986  precision:  0.7951  sensibility: 0.7984   Estim: 300 depth: 2 l_rate: 0.1
+Accuracy : 0.8332  precision:  0.8303  sensibility: 0.8326   Estim: 5 depth: 10 l_rate: 0.1
+Accuracy : 0.8790  precision:  0.8769  sensibility: 0.8786   Estim: 50 depth: 10 l_rate: 0.1
+Accuracy : 0.8867  precision:  0.8846  sensibility: 0.8864   Estim: 100 depth: 10 l_rate: 0.1
+Accuracy : 0.8881  precision:  0.8861  sensibility: 0.8877   Estim: 150 depth: 10 l_rate: 0.1
+Accuracy : 0.8926  precision:  0.8908  sensibility: 0.8923   Estim: 200 depth: 10 l_rate: 0.1
+Accuracy : 0.8921  precision:  0.8901  sensibility: 0.8918   Estim: 300 depth: 10 l_rate: 0.1
+Accuracy : 0.8408  precision:  0.8446  sensibility: 0.8402   Estim: 5 depth: 20 l_rate: 0.1
+Accuracy : 0.8793  precision:  0.8776  sensibility: 0.8790   Estim: 50 depth: 20 l_rate: 0.1
+Accuracy : 0.8820  precision:  0.8805  sensibility: 0.8817   Estim: 100 depth: 20 l_rate: 0.1
+Accuracy : 0.8827  precision:  0.8810  sensibility: 0.8824   Estim: 150 depth: 20 l_rate: 0.1
+Accuracy : 0.8815  precision:  0.8797  sensibility: 0.8812   Estim: 200 depth: 20 l_rate: 0.1
+Accuracy : 0.8840  precision:  0.8824  sensibility: 0.8837   Estim: 300 depth: 20 l_rate: 0.1
+
+Process finished with exit code 0

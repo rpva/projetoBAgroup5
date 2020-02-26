@@ -24,11 +24,12 @@ from sklearn.ensemble import GradientBoostingClassifier
 # data = pd.read_csv('covtype.csv', sep=';')
 # dataSample = data.sample(frac=0.1)
 # data = pd.read_csv('Undersample.csv', sep=',')
-# dataSample = data  # usar 100% (20k valores?)
-data = pd.read_csv('Oversample.csv', sep=',')
-dataSample = data.sample(frac=0.1)
-# data = pd.read_csv('SMOTE_sample.csv', sep=',')
+# dataSample = data  # usar 100% (são apenas 2k valores...)
+# data = pd.read_csv('Oversample.csv', sep=',')
 # dataSample = data.sample(frac=0.1)
+data = pd.read_csv('SMOTE_sample.csv', sep=',')
+dataSample = data.sample(frac=0.1)
+
 
 # Data preparation for the classification models
 y: np.ndarray = dataSample.pop('Cover_Type(Class)').values
