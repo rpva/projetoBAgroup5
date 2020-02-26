@@ -183,7 +183,7 @@ plt.show()
 # Gradient Boosting
 def GB(data1, save=None):
     from sklearn.ensemble import GradientBoostingClassifier
-    print('Gradient Boosting Started \n')
+    print('\n Gradient Boosting Started \n')
     # Existing error in Cover_Type(Class)
     # y: np.ndarray = data1.pop('Cover_Type(Class)').values
     # X: np.ndarray = data1.values
