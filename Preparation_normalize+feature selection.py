@@ -12,6 +12,22 @@ data = pd.read_csv('covtype.csv', sep=';')
 np.random.seed(2)
 
 dataSample = data.sample(frac=0.1)
+# colective boxplot
+dataSample.boxplot(figsize=(10, 6))
+plt.show()
+# individual boxplots
+# columns = dataSample.select_dtypes(include='number').columns
+# rows, cols = choose_grid(10)  # after inspecting source data, only first 10 elements are of interest others are binary
+# plt.figure()
+# fig, axs = plt.subplots(rows, cols, figsize=(cols*4, rows*4), squeeze=False)
+# i, j = 0, 0
+# for n in range(10):
+#     axs[i, j].set_title('Boxplot for %s' % columns[n])
+#     axs[i, j].boxplot(data[columns[n]].dropna().values)
+#     i, j = (i + 1, 0) if (n+1) % cols == 0 else (i, j + 1)
+# fig.tight_layout()
+# plt.show()
+
 # print("dataSample", dataSample)
 dataSample = dataSample.astype({"W_A_1": 'category'})
 dataSample = dataSample.astype({'W_A_2': 'category'})

@@ -171,8 +171,9 @@ multiple_bar_chart(plt.gca(), [target_count.index[0], target_count.index[1],
                    values, 'Target', 'Frequency', 'Cover_Type(Class)')
 plt.show()
 
+
 # EXPORTS TO CSV FILES
 
 # df_smote.to_csv('SMOTE_sample.csv')
 # df_under.to_csv('Undersample.csv')
-df_over.to_csv('Oversample.csv')
+# df_over.to_csv('Oversample.csv')

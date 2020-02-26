@@ -37,7 +37,7 @@ def model_performance(tstY, prdY, n, d=' ', k=' ', n_name='n', d_name=' ', k_nam
     accuracy = metrics.accuracy_score(tstY, prdY)
     precision = metrics.precision_score(tstY, prdY, average='macro')
     sensibility = metrics.recall_score(tstY, prdY, average='macro')
-    print('Accurancy :', str(accuracy)[:6], \
+    print('Accuracy :', str(accuracy)[:6], \
           ' precision: ', str(precision)[:6], \
           ' sensibility: ' + str(sensibility)[:6],
           n_name, n, d_name, d, k_name, k)
