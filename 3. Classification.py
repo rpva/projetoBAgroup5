@@ -18,10 +18,17 @@ from sklearn.ensemble import GradientBoostingClassifier
 #           2.KNN
 #           3.Decision Trees
 #           4.Random Forests
+#           5.Gradient Boosting
 
 # import the dataset into the dataframe, using pandas
-data = pd.read_csv('covtype.csv', sep=';')
-dataSample = data.sample(frac=0.05)
+# data = pd.read_csv('covtype.csv', sep=';')
+# dataSample = data.sample(frac=0.1)
+# data = pd.read_csv('Undersample.csv', sep=',')
+# dataSample = data  # usar 100% (20k valores?)
+data = pd.read_csv('Oversample.csv', sep=',')
+dataSample = data.sample(frac=0.1)
+# data = pd.read_csv('SMOTE_sample.csv', sep=',')
+# dataSample = data.sample(frac=0.1)
 
 # Data preparation for the classification models
 y: np.ndarray = dataSample.pop('Cover_Type(Class)').values
@@ -64,20 +71,20 @@ model_performance1(tstY, prdY)
 plt.figure()
 plot_confusion_matrix(plt.gca(), cnf_mtx, labels)
 plt.show()
-# # Following part NOT working for unbalanced data due to negative values, uncomment for treated data testing
-# estimators = {'GaussianNB': GaussianNB(),
-#               'MultinomialNB': MultinomialNB(),
-#               'BernoulyNB': BernoulliNB()}
-# xvalues = []
-# yvalues = []
-# for clf in estimators:
-#     xvalues.append(clf)
-#     estimators[clf].fit(trnX, trnY)
-#     prdY = estimators[clf].predict(tstX)
-#     yvalues.append(metrics.accuracy_score(tstY, prdY))
-# plt.figure()
-# bar_chart(plt.gca(), xvalues, yvalues, 'Comparison of Naive Bayes Models', '', 'Accuracy', percentage=True)
-# plt.show()
+# Following part NOT working for unbalanced data due to negative values, uncomment for treated data testing
+estimators = {'GaussianNB': GaussianNB(),
+              'MultinomialNB': MultinomialNB(),
+              'BernoulyNB': BernoulliNB()}
+xvalues = []
+yvalues = []
+for clf in estimators:
+    xvalues.append(clf)
+    estimators[clf].fit(trnX, trnY)
+    prdY = estimators[clf].predict(tstX)
+    yvalues.append(metrics.accuracy_score(tstY, prdY))
+plt.figure()
+bar_chart(plt.gca(), xvalues, yvalues, 'Comparison of Naive Bayes Models', '', 'Accuracy', percentage=True)
+plt.show()
 
 
 # KNN

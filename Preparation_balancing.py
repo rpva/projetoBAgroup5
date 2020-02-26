@@ -142,17 +142,30 @@ values['OverSample'] = [target_count.values[0], target_count.values[0], target_c
                         target_count.values[0]]
 # print("values Original + UnderSample + OverSample", values)
 
-smote = SMOTE(random_state=42)
+# smote = SMOTE(random_state=42)
+smote = SMOTE(sampling_strategy='Cover_Type(Class)', random_state=42)
 # print("smote", smote)
-y = unbalanced.pop('Cover_Type(Class)').values
+print("unbalanced", unbalanced)
+# y = unbalanced.pop('Cover_Type(Class)').values
+# unbalanced = unbalanced.astype({'Cover_Type(Class)': 'category'})
+y = unbalanced['Cover_Type(Class)'].values
+print("y",y)
+print("unbalanced", unbalanced)
 X = unbalanced.values
 _, smote_y = smote.fit_sample(X, y)
-# print("_", _)
-# print("smote_y", smote_y)
+print("_", _)
+print("smote_y", smote_y)
 smote_target_count = pd.Series(smote_y).value_counts()
 smote_target_count.describe()
 df_smote = pd.DataFrame(_, smote_y)
-# print("df_smote", df_smote)
+# df_smote.columns = ['Elevation', 'Slope', 'Horizontal_Distance_To_Hydrology', 'Horizontal_Distance_To_Roadways',
+#                  'Horizontal_Distance_To_Fire_Points', 'W_A_1', 'W_A_2', 'W_A_3', 'W_A_4', 'Soil_Type_1',
+#                  'Soil_Type_2', 'Soil_Type_3', 'Soil_Type_4', 'Soil_Type_5', 'Soil_Type_6', 'Soil_Type_10',
+#                  'Soil_Type_11', 'Soil_Type_12', 'Soil_Type_13', 'Soil_Type_14', 'Soil_Type_17', 'Soil_Type_18',
+#                  'Soil_Type_19', 'Soil_Type_20', 'Soil_Type_21', 'Soil_Type_22', 'Soil_Type_23', 'Soil_Type_24',
+#                  'Soil_Type_26', 'Soil_Type_29', 'Soil_Type_30', 'Soil_Type_31', 'Soil_Type_32', 'Soil_Type_33',
+#                  'Soil_Type_34', 'Soil_Type_35', 'Soil_Type_37', 'Soil_Type_38', 'Soil_Type_39', 'Soil_Type_40']
+print("df_smote", df_smote)
 # values['SMOTE'] = [smote_target_count.values[ind_min_class], smote_target_count.values[ind_max_class]] # 7 classes
 values['SMOTE'] = [smote_target_count.values[0], smote_target_count.values[1],
                    smote_target_count.values[2], smote_target_count.values[3],
