@@ -64,20 +64,20 @@ model_performance1(tstY, prdY)
 plt.figure()
 plot_confusion_matrix(plt.gca(), cnf_mtx, labels)
 plt.show()
-# Following part NOT working for unbalanced data due to negative values, uncomment for treated data testing
-estimators = {'GaussianNB': GaussianNB(),
-              'MultinomialNB': MultinomialNB(),
-              'BernoulyNB': BernoulliNB()}
-xvalues = []
-yvalues = []
-for clf in estimators:
-    xvalues.append(clf)
-    estimators[clf].fit(trnX, trnY)
-    prdY = estimators[clf].predict(tstX)
-    yvalues.append(metrics.accuracy_score(tstY, prdY))
-plt.figure()
-bar_chart(plt.gca(), xvalues, yvalues, 'Comparison of Naive Bayes Models', '', 'Accuracy', percentage=True)
-plt.show()
+# # Following part NOT working for unbalanced data due to negative values, uncomment for treated data testing
+# estimators = {'GaussianNB': GaussianNB(),
+#               'MultinomialNB': MultinomialNB(),
+#               'BernoulyNB': BernoulliNB()}
+# xvalues = []
+# yvalues = []
+# for clf in estimators:
+#     xvalues.append(clf)
+#     estimators[clf].fit(trnX, trnY)
+#     prdY = estimators[clf].predict(tstX)
+#     yvalues.append(metrics.accuracy_score(tstY, prdY))
+# plt.figure()
+# bar_chart(plt.gca(), xvalues, yvalues, 'Comparison of Naive Bayes Models', '', 'Accuracy', percentage=True)
+# plt.show()
 
 
 # KNN
@@ -153,8 +153,8 @@ plt.show()
 # plt.axis('off')
 # plt.show()
 
-# Random Trees
-print('Random Trees Started \n')
+# Random Forests
+print('Random Forests Started \n')
 n_estimators = [5, 10, 25, 50, 75, 100, 150, 200, 250, 300]
 max_depths = [5, 10, 25, 50]
 max_features = ['sqrt', 'log2']
